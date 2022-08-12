@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="@dimen/layout_half_padding"
     app:cardElevation="@dimen/layout_half_padding"
-    app:cardUseCompatPadding="true">
+    app:cardUseCompatPadding="true" >
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/iv_owner"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@sample/repositories.json/data/name" />
+            tools:text="android-DocumentCentricApps" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_repo_description"
@@ -43,7 +44,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="@id/tv_repo_name"
             app:layout_constraintTop_toBottomOf="@id/tv_repo_name"
-            tools:text="@sample/repositories.json/data/description" />
+            tools:text="@tools:sample/lorem/random" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chip_star"
@@ -54,7 +55,7 @@
             app:chipIconTint="#FAFA02"
             app:layout_constraintStart_toStartOf="@id/tv_repo_name"
             app:layout_constraintTop_toBottomOf="@id/tv_repo_description"
-            tools:text="@sample/repositories.json/data/stargazers_count" />
+            tools:text="0" />
 
         <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_repo_language"
@@ -64,7 +65,7 @@
             android:maxLines="2"
             app:layout_constraintEnd_toEndOf="@id/tv_repo_name"
             app:layout_constraintTop_toTopOf="@id/chip_star"
-            tools:text="@sample/repositories.json/data/language" />
+            tools:text="Java" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

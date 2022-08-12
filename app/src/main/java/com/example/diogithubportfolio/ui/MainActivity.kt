@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
 
         viewModel.repos.observe(this) {
             when (it) {
+                is MainViewModel.State.Loading -> dialog.show()
                 is MainViewModel.State.Error -> {
                     createDialog {
                         setMessage(it.error.message)
@@ -38,9 +39,7 @@ class MainActivity : AppCompatActivity(), SearchView.OnQueryTextListener {
                     dialog.dismiss()
                     adapter.submitList(it.list)
                 }
-                else -> {       // MainViewModel.State.Loading
-                    dialog.show()
-                }
+                else -> {}
             }
         }
     }
